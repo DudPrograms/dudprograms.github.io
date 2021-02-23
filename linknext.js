@@ -1,6 +1,9 @@
-var str = "Click here or die!";
-document.write("<p>" + str.link("uhoh.jpg") + "</p>");
 
+//nothing to see here
+//var str = "Click here or die!";
+//document.write("<p>" + str.link("uhoh.jpg") + "</p>");
+
+/*
 var canvas = document.getElementById("myCanvas");
 var context = canvas.getContext("2d");
 context.fillStyle = "black";
@@ -45,3 +48,4 @@ function draw(){
 }
 
 draw();
+*/
