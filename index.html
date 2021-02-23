@@ -18,13 +18,25 @@
 
 	<!-- text needs to be white -->
 	<style>
-		.whiteText{
+        .nameText-Title {
+            font-family: Verdana;
+            color: white;
+            font-size: 48px;
+            position: relative;
+            bottom: 160px;
+            white-space: pre;
+        }
+	</style>
+
+	<style>
+		.nameText-Subtitle{
 			font-family: Verdana;
 			color: white;
-			font-size: 48px;
+			font-size: 28px;
 			position: relative;
-			bottom: 160px;
-			
+			bottom: 130px;
+			right: 240px;
+			white-space: pre;
 		}
 	</style>
 
@@ -33,8 +45,9 @@
         .rabbitLogo {
             width: 199px;
             height: 282px;
-			position: relative;
+            position: relative;
             left: 20px;
+            white-space: pre;
         }
 	</style>
 
@@ -43,15 +56,16 @@
 	</head>
 	<body class ="dimBackdrop">	
 		
-		<h1>
+		<h1 style="white-space: nowrap">
 			<!-- No longer necessary, as the monkey is removed
-		<canvas class = "img" id="myCanvas" width="800" height="600"></canvas>
-		<script src="linknext.js"></script>
-		-->
-			<img src="DudProgramstransparent.png" alt="Logo" class="rabbitLogo"/>
-			<text class=" whiteText"> Alec Roberts </text>
-
+	<canvas class = "img" id="myCanvas" width="800" height="600"></canvas>
+	<script src="linknext.js"></script>
+	-->
+			<img src="DudProgramstransparent.png" alt="Logo" class="rabbitLogo" />
+			<text class="nameText-Title"> Alec Roberts </text>
+			<text class="nameText-Subtitle">Programmer and Tech Enthusiast</text>
 		</h1>
+		
 	</body>
 
 
