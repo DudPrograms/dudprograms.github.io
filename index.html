@@ -41,7 +41,7 @@
 			color: white;
 			font-size: 28px;
 			position: relative;
-			bottom: 120px;
+			bottom: 118px;
 			left: 230px;
 			white-space: pre;
         }
@@ -51,8 +51,28 @@
 			color: white;
 			font-size: 28px;
 			position: relative;
-			bottom: 156px;
+			bottom: 155px;
 			left: 50px;
+			white-space: pre;
+        }
+        
+        .aboutText {
+			font-family: Verdana;
+			color: white;
+			font-size: 28px;
+			position: relative;
+			bottom: 192px;
+			left: 240px;
+			white-space: pre;
+        }
+        
+        .contactText {
+			font-family: Verdana;
+			color: white;
+			font-size: 28px;
+			position: relative;
+			bottom: 229px;
+			left: 440px;
 			white-space: pre;
         }
         
@@ -74,28 +94,35 @@
 		<h1 style="white-space: nowrap">
 		<!-- canvas creates rectangles I can use to organize things -->
 		<!-- the drawn elements are not the most important thing to preserve, so we can ignore them if the browser doesn't support them -->
-		<canvas id="titleBlockCanvas" width="640" height="480" style="border:0px solid #000000;"></canvas>
+		<canvas id="titleBlockCanvas" width="1000" height="480" style="border:0px solid #000000;"></canvas>
 		<script>
-			var canvas = document.getElementById("titleBlockCanvas");
-			var context = canvas.getContext("2d");
-			var gradient = context.createLinearGradient(0,0,400,0);
-			
-			canvas.style.left = "230px";
-			canvas.style.top = "148px";
-			canvas.style.position = "absolute";
-			
-			//gradient properties
-			gradient.addColorStop(0, "#0099ff");
-			gradient.addColorStop(1, "#011228");
-			
-			//the title rectangle
-			context.fillStyle = gradient;
-			context.fillRect(120, 0, 500, 30);
-			
-			//the selection rectangle
-			context.fillStyle = gradient;
-			context.fillRect(0, 50, 500, 30);
-		
+			function drawGradients(){
+				var canvas = document.getElementById("titleBlockCanvas");
+				var context = canvas.getContext("2d");
+				var gradient = context.createLinearGradient(0,0,400,0);
+				var gradientList = context.createLinearGradient(0,0,800,0);
+
+				
+				canvas.style.left = "230px";
+				canvas.style.top = "148px";
+				canvas.style.position = "absolute";
+				
+				//gradient properties
+				gradient.addColorStop(0, "#0099ff");
+				gradient.addColorStop(1, "#011228");
+				gradientList.addColorStop(0, "#0099ff");
+				gradientList.addColorStop(1, "#011228");
+				
+				//the title rectangle
+				context.fillStyle = gradient;
+				context.fillRect(120, 0, 500, 30);
+				
+				//the selection rectangle
+				context.fillStyle = gradientList;
+				context.fillRect(0, 50, 1000, 30);
+			}
+
+			drawGradients();
 			
 		</script>
 			<img src="DudProgramstransparent.png" alt="Logo" class="rabbitLogo" />
@@ -106,7 +133,8 @@
 			<div>
 				<a href="index.html" class="homeText">HOME</text>
 				<a href="https://github.com/DudPrograms" class="projectsText">PROJECTS</text>
-			
+				<a href="aboutme.html" class="aboutText">ABOUT ME</text>
+				<a href="contact.html" class="contactText">CONTACT INFO</text>
 			
 			</div>
 			
