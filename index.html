@@ -51,8 +51,8 @@
 			color: white;
 			font-size: 28px;
 			position: relative;
-			bottom: 155px;
-			left: 50px;
+			bottom: 118px;
+			left: 250px;
 			white-space: pre;
         }
         
@@ -61,8 +61,8 @@
 			color: white;
 			font-size: 28px;
 			position: relative;
-			bottom: 192px;
-			left: 240px;
+			bottom: 118px;
+			left: 270px;
 			white-space: pre;
         }
         
@@ -71,8 +71,8 @@
 			color: white;
 			font-size: 28px;
 			position: relative;
-			bottom: 229px;
-			left: 440px;
+			bottom: 118px;
+			left: 290px;
 			white-space: pre;
         }
         
@@ -91,12 +91,11 @@
 	</head>
 	<body class ="dimBackdrop" style="white-space: nowrap">	
 		<!-- prevent text from wrapping -->
-		<h1 style="white-space: nowrap">
+	<h1 style="white-space: nowrap">
 		<!-- canvas creates rectangles I can use to organize things -->
 		<!-- the drawn elements are not the most important thing to preserve, so we can ignore them if the browser doesn't support them -->
 		<canvas id="titleBlockCanvas" width="1000" height="480" style="border:0px solid #000000;"></canvas>
 		<script>
-			function drawGradients(){
 				var canvas = document.getElementById("titleBlockCanvas");
 				var context = canvas.getContext("2d");
 				var gradient = context.createLinearGradient(0,0,400,0);
@@ -120,21 +119,18 @@
 				//the selection rectangle
 				context.fillStyle = gradientList;
 				context.fillRect(0, 50, 1000, 30);
-			}
-
-			drawGradients();
 			
 		</script>
 			<img src="DudProgramstransparent.png" alt="Logo" class="rabbitLogo" />
 			<text class="nameText-Title"> Alec Roberts </text>
-			<text class="nameText-Subtitle">Programmer and Tech Enthusiast</text>
+			<text class="nameText-Subtitle">Programmer and Tech Expert</text>
 			
 			<!-- this is where the selectable elements go -->
 			<div>
-				<a href="index.html" class="homeText">HOME</text>
-				<a href="https://github.com/DudPrograms" class="projectsText">PROJECTS</text>
-				<a href="aboutme.html" class="aboutText">ABOUT ME</text>
-				<a href="contact.html" class="contactText">CONTACT INFO</text>
+				<a href="index.html" class="homeText">HOME</a>
+				<a href="https://github.com/DudPrograms" target = "_blank" class="projectsText">PROJECTS</a>
+				<a href="aboutme.html" class="aboutText">ABOUT ME</a>
+				<a href="contact.html" class="contactText">CONTACT INFO</a>
 			
 			</div>
 			
