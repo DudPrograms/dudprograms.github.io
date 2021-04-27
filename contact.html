@@ -76,20 +76,33 @@
 			white-space: pre;
         }
         
-        a{
+        .cursorText{
         	text-decoration: none
         }
-        a:hover{
+        .cursorText:hover{
         	color: #011228;
+        }
+        
+        .preventHighlight{
+        	-moz-user-select: none;
+        	-webkit-user-select: none;
+        	-ms-user-select: none;
+        	-user-select: none;
+        	-o-user-select: none;
+        }
+        
+        h2{
+       		font-family: Verdana;
+        	color: white;
         }
         
 	</style>
 
 	<head>
 		<link rel="icon" href="DudProgramstransparentHead.png">
-		<title>Contact Me</title>
+		<title>Welcome</title>
 	</head>
-	<body class ="dimBackdrop" style="white-space: nowrap">	
+	<body class ="dimBackdrop preventHighlight" style="white-space: nowrap;" unselectable = "on">	
 		<!-- prevent text from wrapping -->
 	<h1 style="white-space: nowrap">
 		<!-- canvas creates rectangles I can use to organize things -->
@@ -127,14 +140,15 @@
 			
 			<!-- this is where the selectable elements go -->
 			<div>
-				<a href="index.html" class="homeText">HOME</a>
-				<a href="https://github.com/DudPrograms" target = "_blank" class="projectsText">PROJECTS</a>
-				<a href="aboutme.html" class="aboutText">ABOUT ME</a>
-				<a href="contact.html" class="contactText">CONTACT INFO</a>
+				<a href="index.html" class="homeText cursorText">HOME</a>
+				<a href="https://github.com/DudPrograms" target = "_blank" class="projectsText cursorText">PROJECTS</a>
+				<a href="aboutme.html" class="aboutText cursorText">ABOUT ME</a>
+				<a href="contact.html" class="contactText cursorText">CONTACT INFO</a>
 			</div>
 			
-			<!-- This is where I'm going to put some basic info about myself! -->
 			
+			
+			<!-- This is where I'm going to put some basic info about myself! -->		
 		</h1>
 		
 		
