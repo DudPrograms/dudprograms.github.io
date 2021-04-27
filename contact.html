@@ -1,14 +1,143 @@
 <!DOCTYPE html>
 <html>
+	<!-- dark blue background to look nice -->
+	<!-- text needs to be white -->
+	<!-- logo needs to be shrunk and in the corner-->
+	<!-- links do not have underlines, and flash a different color when hovered over -->
+	<style>
+	    .dimBackdrop {
+            background-color: #011228;
+        }
+	
+        .rabbitLogo {
+            width: 199px;
+            height: 282px;
+            position: relative;
+            left: 20px;
+            white-space: pre;
+        }
+        
+        .nameText-Subtitle{
+			font-family: Verdana;
+			color: white;
+			font-size: 28px;
+			position: relative;
+			bottom: 130px;
+			right: 240px;
+			white-space: pre;
+		}
+		
+		.nameText-Title {
+            font-family: Verdana;
+            color: white;
+            font-size: 48px;
+            position: relative;
+            bottom: 160px;
+            white-space: pre;
+        }
+        
+        .homeText {
+			font-family: Verdana;
+			color: white;
+			font-size: 28px;
+			position: relative;
+			bottom: 118px;
+			left: 230px;
+			white-space: pre;
+        }
+        
+        .projectsText {
+			font-family: Verdana;
+			color: white;
+			font-size: 28px;
+			position: relative;
+			bottom: 118px;
+			left: 250px;
+			white-space: pre;
+        }
+        
+        .aboutText {
+			font-family: Verdana;
+			color: white;
+			font-size: 28px;
+			position: relative;
+			bottom: 118px;
+			left: 270px;
+			white-space: pre;
+        }
+        
+        .contactText {
+			font-family: Verdana;
+			color: white;
+			font-size: 28px;
+			position: relative;
+			bottom: 118px;
+			left: 290px;
+			white-space: pre;
+        }
+        
+        a{
+        	text-decoration: none
+        }
+        a:hover{
+        	color: #011228;
+        }
+        
+	</style>
+
 	<head>
-		<title></title>
+		<link rel="icon" href="DudProgramstransparentHead.png">
+		<title>Contact Me</title>
 	</head>
-	<body>
-		<h1>
+	<body class ="dimBackdrop" style="white-space: nowrap">	
+		<!-- prevent text from wrapping -->
+	<h1 style="white-space: nowrap">
+		<!-- canvas creates rectangles I can use to organize things -->
+		<!-- the drawn elements are not the most important thing to preserve, so we can ignore them if the browser doesn't support them -->
+		<canvas id="titleBlockCanvas" width="1000" height="480" style="border:0px solid #000000;"></canvas>
+		<script>
+				var canvas = document.getElementById("titleBlockCanvas");
+				var context = canvas.getContext("2d");
+				var gradient = context.createLinearGradient(0,0,400,0);
+				var gradientList = context.createLinearGradient(0,0,800,0);
+
+				
+				canvas.style.left = "230px";
+				canvas.style.top = "148px";
+				canvas.style.position = "absolute";
+				
+				//gradient properties
+				gradient.addColorStop(0, "#0099ff");
+				gradient.addColorStop(1, "#011228");
+				gradientList.addColorStop(0, "#0099ff");
+				gradientList.addColorStop(1, "#011228");
+				
+				//the title rectangle
+				context.fillStyle = gradient;
+				context.fillRect(120, 0, 500, 30);
+				
+				//the selection rectangle
+				context.fillStyle = gradientList;
+				context.fillRect(0, 50, 1000, 30);
+			
+		</script>
+			<img src="DudProgramstransparent.png" alt="Logo" class="rabbitLogo" />
+			<text class="nameText-Title"> Alec Roberts </text>
+			<text class="nameText-Subtitle">Programmer and Tech Expert</text>
+			
+			<!-- this is where the selectable elements go -->
+			<div>
+				<a href="index.html" class="homeText">HOME</a>
+				<a href="https://github.com/DudPrograms" target = "_blank" class="projectsText">PROJECTS</a>
+				<a href="aboutme.html" class="aboutText">ABOUT ME</a>
+				<a href="contact.html" class="contactText">CONTACT INFO</a>
+			</div>
+			
+			<!-- This is where I'm going to put some basic info about myself! -->
 			
 		</h1>
+		
+		
 
+		
 	</body>
-
-
-</html>
