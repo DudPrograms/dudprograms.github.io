@@ -1,0 +1,131 @@
+/*formatting for all elements*/
+*{
+  padding:0;
+  margin:0;
+  text-decoration:none;
+  list-style:none;
+}
+
+/*if I need to limit the webpage's size, I can adjust the margin's size*/
+#wrap{
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/*verdana is a nice font to use for websites*/
+body{
+  font-family: verdana;
+}
+
+/*this is the logo I use for branding*/
+.top-logo{
+  width: 60px;
+  height:80px;
+  margin-left: 20px;
+  vertical-align: middle;
+  float:left;
+}
+
+/*light blue elements are at the top*/
+.lightblue{
+	background-color: #02bdd1;
+}
+
+/*backgrounds are dark blue*/
+.darkblue{
+	background-color: #011228;
+}
+
+/*make a simple toolbar for the top that scales with the window's width*/
+.toolbar{
+  height:80px;
+  width:100%;
+  background: #2244ff;
+}
+
+/*all navigation links can't be copied*/
+nav{
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -user-select: none;
+  -o-user-select: none;
+}
+
+/*make the entire list float right*/
+nav ul{
+  float: right;
+  margin-right: 40px;
+}
+
+/*organize each element into a line*/
+nav li{
+  display: inline-block;
+  margin: 0 8px;
+  line-height: 85px;
+}
+
+/*make each element float to the right*/
+nav a{
+  color:white;
+  font-size:20px;
+  font-weight:bold;
+  float: right;
+}
+
+/*href elements will fade to black when hovered over*/
+a:hover{
+  color: black;
+  transition: .5s;
+}
+
+/*makes my name really big on the page*/
+label.author{
+  font-size: 25px;
+  line-height: 2.2em;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+
+}
+
+label.subtitle{
+  position: absolute;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  top: 40px;
+  left: 80px;
+}
+
+.paragraph{
+  display: block;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+P{
+  font-size: 18px;
+}
+
+/*when the screen is on a mobile device, push the nav bar down*/
+@media screen and (max-width: 1000px){
+    nav ul{
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: #011228;
+      top: 80px;
+      left: 0;
+      text-align: center;
+    }
+
+    a:hover{
+      color: #666666;
+      transition: .5s;
+    }
+}

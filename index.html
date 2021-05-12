@@ -1,168 +1,41 @@
 <!DOCTYPE html>
-<html>
-	<!-- dark blue background to look nice -->
-	<!-- text needs to be white -->
-	<!-- logo needs to be shrunk and in the corner-->
-	<!-- links do not have underlines, and flash a different color when hovered over -->
-	<style>
-	    .dimBackdrop {
-            background-color: #011228;
-        }
-	
-        .rabbitLogo {
-            width: 199px;
-            height: 282px;
-            position: relative;
-            left: 20px;
-            white-space: pre;
-        }
-        
-        .nameText-Subtitle{
-			font-family: Verdana;
-			color: white;
-			font-size: 28px;
-			position: relative;
-			bottom: 130px;
-			right: 240px;
-			white-space: pre;
-		}
-		
-		.nameText-Title {
-            font-family: Verdana;
-            color: white;
-            font-size: 48px;
-            position: relative;
-            bottom: 160px;
-            white-space: pre;
-        }
-        
-        .homeText {
-			font-family: Verdana;
-			color: white;
-			font-size: 28px;
-			position: relative;
-			bottom: 118px;
-			left: 230px;
-			white-space: pre;
-        }
-        
-        .projectsText {
-			font-family: Verdana;
-			color: white;
-			font-size: 28px;
-			position: relative;
-			bottom: 118px;
-			left: 250px;
-			white-space: pre;
-        }
-        
-        .aboutText {
-			font-family: Verdana;
-			color: white;
-			font-size: 28px;
-			position: relative;
-			bottom: 118px;
-			left: 270px;
-			white-space: pre;
-        }
-        
-        .contactText {
-			font-family: Verdana;
-			color: white;
-			font-size: 28px;
-			position: relative;
-			bottom: 118px;
-			left: 290px;
-			white-space: pre;
-        }
-        
-        .cursorText{
-        	text-decoration: none
-        }
-        .cursorText:hover{
-        	color: #011228;
-        }
-        
-        .preventHighlight{
-        	-moz-user-select: none;
-        	-webkit-user-select: none;
-        	-ms-user-select: none;
-        	-user-select: none;
-        	-o-user-select: none;
-        }
-        
-        h2{
-       		font-family: Verdana;
-        	color: white;
-        }
-        
-	</style>
+<html id = "wrap">
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" href="DudProgramstransparentHead.png">
+		<link rel="stylesheet" href="elements.css">
 		<title>Welcome</title>
 	</head>
-	<body class ="dimBackdrop preventHighlight" style="white-space: nowrap;" unselectable = "on">	
-		<!-- prevent text from wrapping -->
-	<h1 style="white-space: nowrap">
-		<!-- canvas creates rectangles I can use to organize things -->
-		<!-- the drawn elements are not the most important thing to preserve, so we can ignore them if the browser doesn't support them -->
-		<canvas id="titleBlockCanvas" width="1000" height="480" style="border:0px solid #000000;"></canvas>
-		<script>
-				var canvas = document.getElementById("titleBlockCanvas");
-				var context = canvas.getContext("2d");
-				var gradient = context.createLinearGradient(0,0,400,0);
-				var gradientList = context.createLinearGradient(0,0,800,0);
+	<body class="darkblue" unselectable = "on">
+    <div>
+      <nav style="font-size:2vw;" class="toolbar">
+        <img src="DudProgramstransparent.png" alt="" class="top-logo">
+        <label class = "author">Alec Roberts</label>
+        <label class = "subtitle">Programmer and tech expert</label>
+        <ul>
+          <li><a href = "#">Home</a></li>
+          <li><a href = "https://github.com/DudPrograms">My Github</a></li>
+          <li><a href = "#">Contact</a></li>
+          <li><a href = "AlecRobertsResume.pdf">Downloadable Resume</a></li>
+        </ul>
+      </nav>
+    </div>
+  <h1 class = "paragraph" style = "color: white">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>IMPORTANT: THIS WEBSITE IS CURRENTLY UNDER CONSTRUCTION!</p>
+    <p>SOME FEATURES ARE TEMPORARILY ABSENT, STAY TUNED!</p>
+    <br>
+    <br>
+    <p>My name is Alec Roberts, and I'm a programmer!</p>
+    <p>I'm a graduate of Las Positas Community College in Livermore, Ca with a degree and certificate in computer programming.</p>
+    <p>You can download my resume <a href = "AlecRobertsResume.pdf">here</a> or via the banner at the top!</p>
+    <br>
+  </h1>
 
-				
-				canvas.style.left = "230px";
-				canvas.style.top = "148px";
-				canvas.style.position = "absolute";
-				
-				//gradient properties
-				gradient.addColorStop(0, "#0099ff");
-				gradient.addColorStop(1, "#011228");
-				gradientList.addColorStop(0, "#0099ff");
-				gradientList.addColorStop(1, "#011228");
-				
-				//the title rectangle
-				context.fillStyle = gradient;
-				context.fillRect(120, 0, 500, 30);
-				
-				//the selection rectangle
-				context.fillStyle = gradientList;
-				context.fillRect(0, 50, 1000, 30);
-			
-		</script>
-			<img src="DudProgramstransparent.png" alt="Logo" class="rabbitLogo" />
-			<text class="nameText-Title"> Alec Roberts </text>
-			<text class="nameText-Subtitle">Programmer and Tech Expert</text>
-			
-			<!-- this is where the selectable elements go -->
-			<div>
-				<a href="index.html" class="homeText cursorText">HOME</a>
-				<a href="https://github.com/DudPrograms" target = "_blank" class="projectsText cursorText">PROJECTS</a>
-				<a href="aboutme.html" class="aboutText cursorText">ABOUT ME</a>
-				<a href="contact.html" class="contactText cursorText">CONTACT INFO</a>
-			</div>
-			
-			
-			
-			<!-- This is where I'm going to put some basic info about myself! -->		
-		</h1>
-		<h2>
-			<center>IMPORTANT:  THIS WEBSITE IS CURRENTLY UNDER CONSTRUCTION!</center>
-			<center>SOME FEATURES WILL BE TEMPORARILY ABSENT OR NOT FUNCTIONAL!</center>
-			<br>
-			<center>Hello!</center>
-			<br>
-			<center>My name is Alec Roberts.  I'm a programmer.</center>
-			<center>I'm a graduate of Las Positas college in Livermore with a pending certificate and associate's degree in computer programming.</center>
-			
-			<center>You can find my resume on this website, or you can download it <a href="AlecRobertsResume.pdf">here</a>.</center>
-		</h2>
-		
-
-		
 	</body>
 
 
